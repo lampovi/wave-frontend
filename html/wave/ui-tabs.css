@@ -1,0 +1,38 @@
+tabs-container {
+    grid-area: panel;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+tabs-container::part(tab-panels) {
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+
+tabs-container::part(tab-list) {
+    gap: 20px;
+    justify-content: center;
+}
+
+tabs-container > button {
+    display: block;
+    transition: box-shadow ease-in 0.15s, color ease-in 0.15s;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--box-shadow-color-xs);
+    background: transparent;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+}
+tabs-container > button svg {
+    pointer-events: none;
+    vertical-align: top;
+    margin: auto;
+}
+tabs-container > button:not(:focus-visible) {
+    outline: none;
+    box-shadow: 0 0 10px var(--box-shadow-color-s);
+}

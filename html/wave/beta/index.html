@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="manifest" href="manifest.json" type="application/json" /> -->
+        <link rel="shortcut icon" type="image/png" href="icons/lampoviwave-128x128.png" />
+        <link rel="stylesheet" href="bem-style.css"/>
+        <link rel="stylesheet" href="old-style.css"/>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Автономный генератор душевного тепла" />
+        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta property="og:description" content="Автономный генератор душевного тепла" />
+        <meta property="og:image" content="https://wave.lampovi.site/icons/lampoviwave-512x512.jpg" />
+        <meta property="og:title" content="Ламповая Волна" />
+        <meta property="og:type" content="music.radio_station" />
+        <meta property="og:url" content="https://wave.lampovi.site" />
+        <script src="api.js"></script>
+        <script src="ui.js"></script>
+        <title>Ламповая Волна ⁽ᵈᵉᵛ⁾</title>
+    </head>
+    <body>
+        <div class="frame element_shadow_m">
+            <div class="player frame_element">
+                <img class="player_cover element_shadow_m" src="logo.svg"/>
+                <a class="player__track --transition_opacity" href="" target="_blank" title="Search track">
+                    <span class="player__title"></span>
+                    </br>
+                    <span class="player__artist"></span>
+                </a>
+                <play-pause-button class="player_button element_shadow_m" role="button"></play-pause-button>
+                <span class="player__message">Медленно, но верно мы идём к своей цели</span>
+            </div>
+            <div class="panel frame_element">
+                <div class="panel__container">
+                    <div class="panel__lyrics">
+                        <div class="lyrics__text"><div>Этой ночью на улице нашей</div><div>Ни губ не видно, ни глаз</div><div>Город молчит, он скрывает</div><div>Что вдвоем оставил он нас</div><div>Час выбрал сны, но минута</div><div>Иной указала расклад</div><div>Это ночью я покинул свой дом</div><div>Чтобы встретить твой взгляд</div><br><div>Твой смех распахивал небо</div><div>Твой свет отражался на мне</div><div>Видели мы - как кончается лето</div><div>Как сбегает оно в полутьме</div><br><div>Грядущее выбрало дом</div><div>Но настоящее взывало расклад</div><div>Что этой ночью я покину свой дом</div><div>Чтобы встретить твой взгляд</div><br><div>Этой ночью я покинул свой дом</div><div>Чтобы встретить твой взгляд</div><br><div>Этой ночью я покинул свой дом</div><div>Чтобы встретить твой взгляд</div><br><div>Этой ночью я покинул свой дом</div><div>Чтобы встретить твой взгляд</div><br><div>Этой ночью я покинул свой дом</div><div>Чтобы встретить твой взгляд</div><br><div>Уходили мечты, уходили</div><div>Первый луч прогонял их рукой</div><div>Все забуду что когда то мы были</div><div>Что когда то являлись собой</div><div>И...</div></div>
+                    </div>
+                    <div class="panel__settings"></div>
+                    <!-- <div class="panel__preferences"></div> -->    
+                </div>
+                <div class="panel__dash">
+                    <button class="dash__button" disabled alt="Home" ><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></button>
+                    <button class="dash__button" enabled alt="Lyrics"><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="10" x2="6" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="18" y1="18" x2="6" y2="18"></line></svg></button>
+                    <button class="dash__button" alt="Playlist"><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></button>
+                    <button class="dash__button" disabled alt="Settings"><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button>
+                </div>
+            </div>
+        </div>
+        <audio is="music-controller" preload="none">
+            <source src="" type="audio/ogg; codecs=opus"/>
+        </audio>
+    </body>
+</html>

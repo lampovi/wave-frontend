@@ -1,0 +1,101 @@
+<!-- https://wave.lampovi.site/demos/snowfall-1 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo: Snowfall1</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="ui.js"></script>
+        <style>
+            html {
+                background: no-repeat center/cover url('Dominik Dombrowski.jpg');
+                color: white;
+                font-family: sans-serif;
+                overflow: hidden;
+            }
+            html, body { min-height: 100vh; min-width: 100vw; }
+            body {
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                column-gap: 20px;
+            }
+            canvas {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+            }
+            a { color: white; }
+            .-defaultShadow {
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .frame {
+                backdrop-filter: blur(25px);
+                background: rgba(255,255,255,0.1);
+                padding: 30px;
+                border-radius: 20px;
+            }
+            .player {
+                display: grid;
+                grid-gap: 20px;
+                max-width: 250px;
+            }
+            .player_cover {
+                width: 250px;
+                height: 250px;
+                border-radius: 20px;
+            }
+            .player_track {
+                text-decoration: none;
+                display: block;
+                font-size: 1.2em;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            .player_title {
+                font-weight: bold;
+                font-size: larger;
+            }
+            .player_button {
+                display: block;
+                width: 72px;
+                height: 72px;
+                margin: auto;
+                transition: box-shadow ease-in 0.15s;
+                border-radius: 50%;
+            }
+            .player_button:hover {
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            }
+            .player_message {
+                text-align: center;
+                font-size: 0.95em;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="frame -defaultShadow">
+            <div class="playlist"></div>
+            <div class="player">
+                <img class="player_cover -defaultShadow" is="smart-cover" src="logo.svg"/>
+                <a class="player_track"
+                    href="https://www.google.com/search?q=Toby+Fox+%E2%80%93+Home"
+                    target="_blank"
+                    title="Search track">
+                    <span class="player_title">Home</span>
+                    </br>
+                    <span class="player_artist">Toby Fox</span>
+                </a>
+                <play-pause-button class="player_button -defaultShadow" role="button"></play-pause-button>
+                <span class="player_message">Пора доставать из шкафа дублёнки, коньки и шапки...</span>
+            </div>
+            <div class="lyrics"></div>
+        </div>
+        <audio is="music-controller" src="Toby Fox - Home.mp3"></audio>
+        <canvas is="precipitation-snowfall" amount="2" maxR="1" minR="0.5" maxV="1" minV="0.5" fps="25" match="window">No canvas support</canvas>
+    </body>
+    <script src="snowfall.js"></script>
+</html>

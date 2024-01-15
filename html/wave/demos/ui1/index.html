@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo: UI1</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="ui.js"></script>
+        <link rel="stylesheet" href="bem-style.css"/>
+        <link rel="stylesheet" href="old-style.css"/>
+    </head>
+    <body>
+        <noscript>
+            <div class="fatal_dialog">
+                <div class="fatal_dialog__background"></div>
+                <div class="fatal_dialog__block element_shadow_m">
+                    <div>
+                        <h1 class="header_title"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            JavaScript is disabled</h1>
+                        <p>
+                            Lampovi Wave can't work without JS.
+                            If you use browser extensions, such as NoScript, please make exception for us.
+                            We don't have third-party trackers or adversiting blocks.
+                        </p>
+                        <p>
+                            However, you can also try our tiny version of radio, that works even in Internet Explorer&nbsp6
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .frame {
+                    display: none;
+                }
+                .fatal_dialog__block {
+                    position: absolute;
+                    z-index: 10000;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    border-radius: 30px;
+                    padding: 30px;
+                    backdrop-filter: blur(20px);
+                }
+                .fatal_dialog__background {
+                    position: absolute;
+                    z-index: 9999;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    backdrop-filter: blur(5px);
+                }
+            </style>
+        </noscript>
+        <div class="frame element_shadow_m">
+            <div class="player">
+                <img class="player_cover element_shadow_m" is="smart-cover" src="Some Nights.jpg"/>
+                <a class="player_track"
+                    href="https://www.google.com/search?q=Fun.+%E2%80%93+We+Are+Young"
+                    target="_blank"
+                    title="Search track">
+                    <span class="player_title">We Are Young</span>
+                    </br>
+                    <span class="player_artist">Fun.</span>
+                </a>
+                <play-pause-button class="player_button element_shadow_m" role="button"></play-pause-button>
+                <span class="player_message">Не сдаваться! Не бежать! Не сожалеть!</span>
+            </div>
+            <div class="lyrics">
+                <div class="lyrics_text" is="progressive-lyrics">
+                </div>
+            </div>
+            <div class="dash" is="radio-buttons">
+                <input is="radio-button" type="radio-button" class="dash__button" disabled alt="Home" ><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></button>
+                <input is="radio-button" type="radio-button" class="dash__button" enabled alt="Lyrics"><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="10" x2="6" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="18" y1="18" x2="6" y2="18"></line></svg></button>
+                <input is="radio-button" type="radio-button" class="dash__button" alt="Playlist"><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></button>
+                <input is="radio-button" type="radio-button" class="dash__button" disabled alt="Settings"><svg class="dash__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button>
+            </div> 
+        </div>
+        <audio is="music-controller" src="Fun. — We Are Young (feat. Janelle Monáe).mp3"></audio>
+    </body>
+</html>
